@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"1v14V":[function(require,module,exports) {
+})({"farZc":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
+module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,8 +583,107 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"4M6V8":[function(require,module,exports) {
+},{}],"8lqZg":[function(require,module,exports) {
+// icons
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _menuIconSvg = require("./images/menu-icon.svg");
+var _menuIconSvgDefault = parcelHelpers.interopDefault(_menuIconSvg);
+var _menuCloseSvg = require("./images/menu-close.svg");
+var _menuCloseSvgDefault = parcelHelpers.interopDefault(_menuCloseSvg);
+// Display year in the footer using Date
+const footerYear = document.getElementById("copyrightYear");
+let d = new Date();
+footerYear.textContent = d.getFullYear();
+// Navigation functionality
+const navToggleButton = document.getElementById("navToggleButton");
+const navBarLinks = document.getElementById("navbarLinks");
+const menuToggleIcon = document.querySelector("#menuToggleIcon");
+let hidden = true;
+navToggleButton.addEventListener("click", ()=>{
+    if (hidden) {
+        // navToggleButton.classList.add("nav__toggle-focus");
+        navBarLinks.classList.add("nav__links-show");
+        menuToggleIcon.setAttribute("src", (0, _menuCloseSvgDefault.default));
+        hidden = false;
+    } else {
+        // navToggleButton.classList.remove("nav__toggle-focus");
+        navBarLinks.classList.remove("nav__links-show");
+        menuToggleIcon.setAttribute("src", (0, _menuIconSvgDefault.default));
+        hidden = true;
+    }
+});
 
-},{}]},["1v14V","4M6V8"], "4M6V8", "parcelRequire6f5a")
+},{"./images/menu-icon.svg":"eqYUY","./images/menu-close.svg":"4rZzR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eqYUY":[function(require,module,exports) {
+module.exports = require("4d91347f1eb2d043").getBundleURL("bLxZJ") + "menu-icon.f9c77961.svg" + "?" + Date.now();
 
-//# sourceMappingURL=whatfont.com (copy).59712999.js.map
+},{"4d91347f1eb2d043":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"4rZzR":[function(require,module,exports) {
+module.exports = require("36f2fd063402d3c2").getBundleURL("bLxZJ") + "menu-close.b008efad.svg" + "?" + Date.now();
+
+},{"36f2fd063402d3c2":"lgJ39"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["farZc","8lqZg"], "8lqZg", "parcelRequireef48")
+
+//# sourceMappingURL=index.975ef6c8.js.map
